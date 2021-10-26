@@ -1,8 +1,8 @@
-const {expect} = require('chai')
-const Takeaway = require('../lib/Takeaway')
+const {expect} = require('chai');
+const Takeaway = require('../lib/Takeaway');
 
-describe('Test', () => {
-  it("", () => {
+describe('Takeaway', () => {
+  it("getMenu", () => {
     testTakeaway = new Takeaway();
     expect(testTakeaway.getMenu()).to.be.an.instanceof(Object)
     expect(testTakeaway.getMenu()).to.deep.eq(
@@ -12,5 +12,6 @@ describe('Test', () => {
         sides: { salad: 2.2, chips: 2, sauce: 0.8 }
       }
     )
-  })
-})
+  });
+
+});
