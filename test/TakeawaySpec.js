@@ -7,9 +7,21 @@ describe('Takeaway', () => {
     expect(testTakeaway.getMenu()).to.be.an.instanceof(Object)
     expect(testTakeaway.getMenu()).to.deep.eq(
       {
-        pizzas: { pepperoni: 8, margherita: 6, beef: 7.5 },
-        wraps: { chicken: 8, lamb: 3, shish: 5 },
-        sides: { salad: 2.2, chips: 2, sauce: 0.8 }
+        pizzas: [
+          { type: 'pepperoni', price: 8 },
+          { type: 'margherita', price: 6 },
+          { type: 'beef', price: 7.5 }
+        ],
+        wraps: [
+          { type: 'chicken', price: 8 },
+          { type: 'lamb', price: 6 },
+          { type: 'shish', price: 7.5 }
+        ],
+        sides: [
+          { type: 'salad', price: 2.2 },
+          { type: 'chips', price: 2 },
+          { type: 'sauce', price: 0.8 }
+        ]
       }
     )
   });
